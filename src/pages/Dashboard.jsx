@@ -95,10 +95,11 @@ const Dashboard = () => {
                     <iframe 
                       width="100%" 
                       height="100%" 
-                      src={`https://www.youtube.com/embed/${currentTopic.videoId}`} 
-                      title="YouTube video player" 
+                      src={`https://www.youtube.com/embed/${currentTopic.videoId}?rel=0&modestbranding=1`} 
+                      title={currentTopic.title}
                       frameBorder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
                     ></iframe>
                   </div>

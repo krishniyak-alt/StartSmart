@@ -65,7 +65,7 @@ const defaultQuiz = {
 
 export const ROADMAPS = {
   webdev: [
-    { id: 'wd1', title: 'Internet Fundamentals', description: 'How the web works, HTTP, DNS.', videoId: 'BBFrm-QU8ZE', quiz: defaultQuiz },
+    { id: 'wd1', title: 'Internet Fundamentals', description: 'How the web works, HTTP, DNS.', videoId: 'hJHvdBlSxug', quiz: defaultQuiz },
     { id: 'wd2', title: 'HTML & CSS Basics', description: 'Structure and styling of web pages.', videoId: 'mU6anWqZJcc', quiz: defaultQuiz },
     { id: 'wd3', title: 'JavaScript Essentials', description: 'Programming logic, DOM manipulation.', videoId: 'W6NZfCO5SIk', quiz: defaultQuiz },
     { id: 'wd4', title: 'React.js', description: 'Building UI components and state management.', videoId: 'bMknfKXIFA8', quiz: defaultQuiz },
