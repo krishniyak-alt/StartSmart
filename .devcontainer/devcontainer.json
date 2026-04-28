@@ -14,5 +14,5 @@
     }
   },
   "postCreateCommand": "npm install && cd backend && npm install && cd ..",
-  "postStartCommand": "npm run dev"
+  "postStartCommand": "npm run dev &"
 }
