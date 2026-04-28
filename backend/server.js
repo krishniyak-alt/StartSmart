@@ -9,9 +9,17 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const apiKey = process.env.GEMINI_API_KEY;
+if (!apiKey) {
+  console.warn("⚠️ WARNING: GEMINI_API_KEY is not set in the environment variables!");
+  console.warn("⚠️ Please create a .env file in the backend folder and add your API key.");
+}
+const genAI = new GoogleGenerativeAI(apiKey || "dummy_key");
 
 app.post("/chat", async (req, res) => {
+  if (!apiKey) {
+    return res.status(500).json({ error: "API key is missing. Please add GEMINI_API_KEY to your .env file." });
+  }
   console.log("Request received:", req.body);
   try {
     const { messages } = req.body;
