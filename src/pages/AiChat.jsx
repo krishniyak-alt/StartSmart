@@ -36,7 +36,8 @@ const AiChat = () => {
     setError('');
 
     try {
-      const res = await fetch("/chat", {
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || '';
+      const res = await fetch(`${backendUrl}/chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
